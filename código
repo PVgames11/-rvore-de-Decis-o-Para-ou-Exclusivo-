@@ -1,0 +1,8 @@
+from sklearn import tree
+X = [[0, 0], [1, 1], [0, 1], [1, 0]]
+y = [0, 0, 1, 1]
+fn = ['Entrada 1', 'Entrada 2']
+cn = ['Falso', 'Verdadeiro']
+clf = tree.DecisionTreeClassifier()
+clf = clf.fit(X, y)
+tree.plot_tree(clf, feature_names = fn, class_names= cn, filled = True)
